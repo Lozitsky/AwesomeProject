@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- http://tomee.apache.org/common-datasource-configurations.html -->
+<!-- http://tomee.apache.org/datasource-config.html -->
+<!-- https://www.tomitribe.com/blog/configuring-jdbc-in-tomee/ -->
+<!-- https://oglimmer.medium.com/tomee-and-jpa-datasources-b95acb8663e4 -->
+<!-- https://www.journaldev.com/2513/tomcat-datasource-jndi-example-java -->
+<!-- http://tomee.apache.org/tomee-8.0/docs/datasource-config.html -->
+<!-- when configure local JNDI -->
+<Context relodable="true">
+
+<!--    <Resource id="MySQLDataSource" type="javax.sql.DataSource">
+        &lt;!&ndash;        name="jdbc/mysql_ebookshop" &ndash;&gt;
+        userName = admin_db
+        password = password
+        maxActive = 100
+        maxIdle = 30
+        maxWait = 10000
+        jdbcDriver = com.mysql.cj.jdbc.Driver
+        jdbcUrl = jdbc:mysql://localhost:3306/t_jakarta?useUnicode=yes&amp;characterEncoding=UTF-8
+    </Resource>-->
+
+</Context>
