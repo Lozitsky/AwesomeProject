@@ -10,8 +10,9 @@ import java.util.Optional;
 import java.util.function.Function;
 // https://github.com/hantsy/jakartaee-faces-sample/blob/22169c003b85f634086b31c564dd855538c0cf2b/src/main/java/com/example/domain/Task.java
 // https://stackoverflow.com/a/60360233/9586230
-
+// https://stackoverflow.com/a/11178016/9586230
 @Entity
+@Table(name = "task", schema = "awesome_project")
 @EntityListeners(StateListener.class)
 public class Task implements Serializable {
     private static final long serialVersionUID = -4997538174943919962L;
@@ -31,12 +32,13 @@ public class Task implements Serializable {
     @Column(name = "id")
     private Long id;
     @Basic
-    @Column(name = "name")
+    @Column(name = "name", length = 100)
     private String name;
     @Basic
-    @Column(name = "description")
+    @Column(name = "description", length = 1000)
     private String description;
     @Enumerated(EnumType.STRING)
+    @Column(name = "status", length = 30)
     private Status status = Status.TODO;
     @Embedded
     private Audit audit;
@@ -106,9 +108,9 @@ public class Task implements Serializable {
     public String toString() {
         return "Task{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", status=" + status +
+                ", name='" + name + "'" +
+                ", description='" + description + "'" +
+                ", status='" + status + "'" +
                 Optional.ofNullable(audit).orElse(new Audit())
                 +
                 '}';

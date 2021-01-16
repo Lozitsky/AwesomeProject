@@ -1,12 +1,7 @@
 package com.kirilo.injection;
 
 import javax.ejb.EJB;
-import javax.ejb.embeddable.EJBContainer;
 import javax.inject.Inject;
-import javax.naming.Context;
-import javax.naming.NameClassPair;
-import javax.naming.NamingEnumeration;
-import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
